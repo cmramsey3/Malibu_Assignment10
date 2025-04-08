@@ -14,7 +14,7 @@
 
 from dataProcessingPackage.dataProcessing import *
 from dataProcessingPackage.JSON_to_CSV import *
-from APIPackage.API import *
+from APIPackage.API_load import *
 import json
 import requests
 
