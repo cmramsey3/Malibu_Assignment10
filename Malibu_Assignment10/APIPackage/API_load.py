@@ -11,3 +11,27 @@
 # Citations: {"Stack Overflow" is not sufficient. Provide repeatable links, book page #, etc.}
 
 # Anything else that's relevant
+
+
+import json
+import requests
+
+class API_load:
+    """
+    Runs the URL API request and parses the returned data into a python data structure
+    """
+    def __init__(self):
+        """
+        Constructor
+        """
+
+    def load_API(self):
+        """
+        Loads the 2025 national income tax brackets from an API URL
+        @return dict: 
+        """
+        response = requests.get('https://api.api-ninjas.com/v1/incometax?country=US&year=2025', headers={'X-Api-Key': 'TQpOkYeBiyYoHVbkxVmS+A==qHUiL3KyQifZujA4'})
+        json_string = response.content
+
+        parsed_json = json.loads(json_string)
+        return parsed_json

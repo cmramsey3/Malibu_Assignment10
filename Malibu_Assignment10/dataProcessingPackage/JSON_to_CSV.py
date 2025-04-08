@@ -11,3 +11,13 @@
 # Citations: {"Stack Overflow" is not sufficient. Provide repeatable links, book page #, etc.}
 
 # Anything else that's relevant
+
+
+# to-do for this module
+# Write the JSON dictionary saved from the API_load class in API.py to a CSV file and save in the data folder
+
+
+class JSON_to_CSV:
+    """
+
+    """

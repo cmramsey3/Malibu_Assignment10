@@ -11,3 +11,13 @@
 # Citations: {"Stack Overflow" is not sufficient. Provide repeatable links, book page #, etc.}
 
 # Anything else that's relevant
+
+
+# to-do in this module
+# Create a class that intakes a dictionary that is created by API_load class in API.py and extract some interesting 
+# data and print a friendly message with it to the console.
+
+class dataProcessing:
+    """
+
+    """
