@@ -1,0 +1,54 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>884b734f-5ba5-450f-bc5f-6e3b35b82f07</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>mainPackage\main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Malibu_Assignment10</Name>
+    <RootNamespace>Malibu_Assignment10</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="APIPackage\API.py" />
+    <Compile Include="APIPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dataProcessingPackage\dataProcessing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dataProcessingPackage\JSON_to_CSV.py" />
+    <Compile Include="dataProcessingPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mainPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mainPackage\main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="APIPackage\" />
+    <Folder Include="dataProcessingPackage\" />
+    <Folder Include="mainPackage\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
