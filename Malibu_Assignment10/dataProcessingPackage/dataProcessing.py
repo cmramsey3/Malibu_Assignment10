@@ -31,11 +31,12 @@ class dataProcessing:
         """
         bracket_data = []
 
-        if "brackets" in self.data:
-            for bracket in self.data["brackets"]:
-                bracket_data.append({
-                    "income": bracket.get("income", "N/A"),
-                    "rate": bracket.get("rate", "N/A")
-                })
+        brackets = self.data["federal"]["married"]["brackets"]
+        for bracket in brackets:
+            bracket_data.append({
+                "min": bracket.get("min", "N/A"),
+                "max": bracket.get("max", "N/A"),
+                "rate": bracket.get("rate", "N/A")
+            })
 
         return bracket_data
