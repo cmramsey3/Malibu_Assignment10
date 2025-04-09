@@ -11,13 +11,32 @@
 # Citations: {"Stack Overflow" is not sufficient. Provide repeatable links, book page #, etc.}
 
 # Anything else that's relevant
-
-
 # to-do in this module
 # Create a class that intakes a dictionary that is created by API_load class in API.py and extract some interesting 
 # data and print a friendly message with it to the console.
 
 class dataProcessing:
     """
-
+    Processes JSON data returned from the API and prepares it for use or CSV export.
     """
+
+    def __init__(self, json_data):
+        self.data = json_data
+
+    def extract_bracket_data(self):
+        """
+        Extracts income tax brackets from the JSON into a list of dictionaries.
+
+        @return list[dict]: Each dict contains 'income' and 'rate' keys.
+        """
+        bracket_data = []
+
+        brackets = self.data["federal"]["married"]["brackets"]
+        for bracket in brackets:
+            bracket_data.append({
+                "min": bracket.get("min", "N/A"),
+                "max": bracket.get("max", "N/A"),
+                "rate": bracket.get("rate", "N/A")
+            })
+
+        return bracket_data
